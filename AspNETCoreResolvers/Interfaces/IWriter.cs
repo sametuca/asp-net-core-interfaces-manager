@@ -1,7 +1,7 @@
 ﻿namespace AspNETCoreResolvers.Interfaces
 {
-    public interface IWriter
+    public interface IWriter<in TParam, out TResult>
     {
-        public string Write();
+        public TResult Write(TParam param);
     }
 }

@@ -10,8 +10,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddKeyedSingleton<IWriter, WriterA>("writeA");
-builder.Services.AddKeyedSingleton<IWriter, WriterB>("writerB");
+builder.Services.AddKeyedSingleton<IWriter<string,string>, WriterA>("writeA");
+builder.Services.AddKeyedSingleton<IWriter<string, string>, WriterB>("writerB");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

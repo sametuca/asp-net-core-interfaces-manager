@@ -2,11 +2,12 @@
 
 namespace AspNETCoreResolvers.Modela
 {
-    public class WriterA : IWriter
+    public class WriterA : IWriter<string, string>
     {
-        public string Write()
+        public string Write(string param)
         {
-            return "WriterA";
+           return $"WriterA: {param}";
         }
     }
+
 }

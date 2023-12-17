@@ -20,9 +20,9 @@ namespace AspNETCoreResolvers.Controllers
         }
 
         [HttpGet("writeA")]
-        public string GetWriteA([FromKeyedServices("writeA")] IWriter writer)
+        public string GetWriteA([FromKeyedServices("writeA")] IWriter<string,string> writer)
         {
-            return writer.Write();
+            return writer.Write("testParam");
         }
 
 
